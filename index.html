@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresher Jobs Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fresher Jobs Portal</h1>
+        <nav>
+            <a href="#jobs">Jobs</a>
+            <a href="#register">Register</a>
+            <a href="#apply">Apply</a>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h2>Find Your Dream Job as a Fresher</h2>
+        <input type="text" id="search" placeholder="Search jobs by skill or location...">
+        <button onclick="searchJobs()">Search</button>
+    </section>
+    
+    <section id="jobs">
+        <h2>Available Jobs</h2>
+        <div id="job-list">
+            <!-- Jobs will be populated by JS -->
+        </div>
+    </section>
+    
+    <section id="register">
+        <h2>Register as a Job Seeker</h2>
+        <form id="reg-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Skills (e.g., Java, Marketing)" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+    
+    <section id="apply">
+        <h2>Apply for a Job</h2>
+        <div id="selected-job-details" style="display: none;">
+            <!-- Selected job details will show here -->
+        </div>
+        <form id="apply-form">
+            <input type="text" id="job-title-input" placeholder="Job Title" required readonly>
+            <input type="file" accept=".pdf,.doc" required> <!-- Resume upload -->
+            <textarea placeholder="Cover Letter" required></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+        <div id="application-success" style="display: none;">
+            <h3>Application Sent Successfully!</h3>
+            <p>Your application has been submitted. You'll receive a confirmation email soon.</p>
+            <button onclick="resetApplication()">Apply for Another Job</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Fresher Jobs Portal. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
